@@ -4,6 +4,7 @@ import connectDB from './config/db.js';
 import authRoutes from "./routes/auth.js"
 import rolesRoutes from "./routes/roles.js"
 import usersRoutes from "./routes/users.js"
+import "./keepAlive.js"
 import './models/Role.js';
 
 dotenv.config();
