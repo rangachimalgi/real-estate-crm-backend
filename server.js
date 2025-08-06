@@ -4,6 +4,8 @@ import connectDB from './config/db.js';
 import authRoutes from "./routes/auth.js"
 import rolesRoutes from "./routes/roles.js"
 import usersRoutes from "./routes/users.js"
+import siteVisitRoutes from "./routes/siteVisits.js"
+
 import "./keepAlive.js"
 import './models/Role.js';
 
@@ -33,6 +35,7 @@ connectDB();
 app.use('/auth', authRoutes);
 app.use('/roles', rolesRoutes);
 app.use('/users', usersRoutes);
+app.use('/site-visits', siteVisitRoutes);
 
 // Health check
 app.get('/', (req, res) => {

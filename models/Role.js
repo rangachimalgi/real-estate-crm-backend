@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
 const RoleSchema = new mongoose.Schema({
-  name: { type: String, unique: true, required: true }, // 'manager', 'executive', etc
-  screens: [String], // e.g. ['Dashboard', 'Leads']
-  permissions: [String] // optional
+  name: { type: String, unique: true, required: true },
+  screens: [String], 
+  permissions: [String] 
 });
 
 const Role = mongoose.model('Role', RoleSchema);

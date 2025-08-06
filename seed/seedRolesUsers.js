@@ -17,7 +17,7 @@ const seed = async () => {
     const roles = {
       superadmin: await Role.create({
         name: 'superadmin',
-        screens: ['Dashboard', 'Leads', 'SiteVisits', 'Properties', 'Bookings', 'Payments', 'Chat', 'SiteStaff', 'Reports']
+        screens: ['Dashboard', 'Leads', 'SiteVisits', 'Properties', 'Bookings', 'Payments', 'Chat', 'SiteStaff', 'Reports', 'DeskPanel']
       }),
       manager: await Role.create({
         name: 'manager',
