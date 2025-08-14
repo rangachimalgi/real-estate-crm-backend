@@ -8,10 +8,12 @@ import rolesRoutes from "./routes/roles.js"
 import usersRoutes from "./routes/users.js"
 import siteVisitRoutes from "./routes/siteVisits.js"
 import projectRoutes from "./routes/projects.js"
+import chatRoutes from "./routes/chat.js"
 
 import "./keepAlive.js"
 import './models/Role.js';
 import './models/Project.js';
+import './models/Chat.js';
 
 dotenv.config();
 const app = express();
@@ -47,13 +49,14 @@ app.use('/roles', rolesRoutes);
 app.use('/users', usersRoutes);
 app.use('/site-visits', siteVisitRoutes);
 app.use('/projects', projectRoutes);
+app.use('/chat', chatRoutes);
 
 // Health check
 app.get('/', (req, res) => {
   res.send('👋 Hello from server');
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
